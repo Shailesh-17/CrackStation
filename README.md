@@ -7,8 +7,7 @@ My Library cracks a three character password.
 This whole assignment is about cracking three character passwords.At first we implemented a library for one character(POC v1) and then two characters(POC v2) and finally the three characters(MVP).
 
 ##Mission Statement
-
-The main purpose of the library used in this code is used to crack a SHA-1 or SHA-256 three digit password.  
+The main goal is to learn swift and Github flow. This library can crack encrypted password. The Complexity of the password must be improved. This library cracks a three character passwords. It will also be helpful for a hacker who wants to crack a password.    
 
 ##Installation
 

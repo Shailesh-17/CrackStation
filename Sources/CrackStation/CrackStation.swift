@@ -10,7 +10,7 @@ public class CrackStation: Decrypter{
         dictwiththreecharacters = (try? self.loadDictionaryFromDisk(from: "data")) ?? [:]
     }
     
-    func loadDictionaryFromDisk(from tableName: String) throws -> [String : String] {
+    private func loadDictionaryFromDisk(from tableName: String) throws -> [String : String] {
         guard let path = Bundle.module.url(forResource: tableName, withExtension: "json") else { return [:] }
         let data = try Data(contentsOf: path)
         let jsonResult = try JSONSerialization.jsonObject(with: data)
