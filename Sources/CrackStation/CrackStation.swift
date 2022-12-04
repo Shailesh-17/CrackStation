@@ -4,10 +4,10 @@ import Foundation
 
 public class CrackStation: Decrypter{
     
-    private var dictwiththreecharacters = [String : String]()
+    private var dictWithThreeCharacters = [String : String]()
     
     public required init(){
-        dictwiththreecharacters = (try? self.loadDictionaryFromDisk(from: "data")) ?? [:]
+        dictWithThreeCharacters = (try? self.loadDictionaryFromDisk(from: "data")) ?? [:]
     }
     
     private func loadDictionaryFromDisk(from tableName: String) throws -> [String : String] {
@@ -23,8 +23,8 @@ public class CrackStation: Decrypter{
     }
     
     public func decrypt(shaHash: String) -> String?{
-        let n = dictwiththreecharacters[shaHash]
-        return n
+        let password = dictWithThreeCharacters[shaHash]
+        return password
     }
     
 }
